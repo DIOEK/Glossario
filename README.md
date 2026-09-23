@@ -158,3 +158,9 @@ msfvenom - metasploit framework tool that is capable of crafting payloads https:
 \x00 -	NULL
 \x0A -	Line Feed (LF)
 \x0D -	Carriage Return (CR)
+
+Process - OS - is a program in execution, When in disk we say program after execution we say process. Each processes has a PID, each process also has a Virtual adress EX: 0x00401000. The OS translates this address into physical memory, giving processess memory isolation.
+
+Stack - region of virtual memory. Keeps function calls and temporary data associated with those calls. For example print(). The buffer is tipically stored inside the stack. When teh function returns the memory of the satck is released.
+
+Heap - Place for dinamically allocated memory, It has Persistence untill freed.
