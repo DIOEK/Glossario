@@ -164,3 +164,7 @@ Process - OS - is a program in execution, When in disk we say program after exec
 Stack - region of virtual memory. Keeps function calls and temporary data associated with those calls. For example print(). The buffer is tipically stored inside the stack. When teh function returns the memory of the satck is released.
 
 Heap - Place for dinamically allocated memory, It has Persistence untill freed.
+
+Chisel - tunnieling tool chisel client 10.10.14.3:8000 R:80:127.0.0.1:80 	Listen on attack on 80, forward to localhost port 80 on client
+chisel client 10.10.14.3:8000 R:4444:10.10.10.240:80 	Listen on attack on 4444, forward to 10.10.10.240 port 80
+chisel client 10.10.14.3:8000 R:socks 
