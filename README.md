@@ -207,4 +207,28 @@ Clear-Host - cls or clear
 
 ILSpy - ILSpy is the open-source .NET assembly browser and decompiler. It is designed to convert compiled .NET assemblies back into readable C# source code, while also providing a comprehensive metadata explorer and assembly analysis tools. - https://deepwiki.com/icsharpcode/ILSpy - https://github.com/icsharpcode/ILSpy
 
-ghidra - 
+sc qc <service> - windows privesc - this only works with SERVICES, not files, this'll tell me what file is being executed once I read BINARY_PATH_NAME
+  This displays the service configuration, including:
+- SERVICE_NAME — service name.
+- BINARY_PATH_NAME — executable path and arguments. The path needs to be quopted unless it risks escaping.
+- SERVICE_START_NAME — account running the service, such as LocalSystem. If it is localsystem it's being run as system, easy.
+- START_TYPE — whether the service starts automatically, manually, or is disabled.
+
+AccessChk - accesschk.exe - checks for permissions and other stuff in windows. For example this: accesschk.exe /accepteula -uvwqk checks for write permissions on a given service https://learn.microsoft.com/en-us/sysinternals/downloads/accesschk
+
+NT AUTHORITY\INTERACTIVE" group : essentially all logged users.
+
+registry - windows - A windows database that contains keys also called HKLM (containers, similar to folders), values (named pieces of data inside those containers), data (the actual information stored inside each value), permissions (who can read or modify keys and their values). The database is used to store configuration data that Windows, users, services, and applications can read or modify.
+  * ImagePath: which executable is configured for the service.
+  * Start: how the service is configured to start.
+    0	Boot	Started by the boot loader; typically used for boot-start drivers.
+    1	System	Started by the operating system during system initialization; typically used for drivers.
+    2	Automatic	Windows starts the service automatically during startup.
+    3	Manual (Demand Start)	The service starts when requested, for example by the Service Control Manager.
+    4	Disabled	The service cannot be started normally until it is re-enabled.
+  * ObjectName: which account the service is configured to run under.
+
+HKLM - Run - HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Run keeps the autorun contents.
+
+.msi file - windows - An MSI file is a Windows installer package file. Can be converted from msi to exe. It's used by some versions of Windows when installing updates from Windows Update, as well as by other installer tools. https://www.lifewire.com/msi-file-4142884
+
